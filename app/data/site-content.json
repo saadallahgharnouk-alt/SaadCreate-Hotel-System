@@ -1,0 +1,102 @@
+{
+  "brand": {
+    "name": "SaadCreate Hotel",
+    "tagline": "Luxury redefined, crafted for you.",
+    "logo": "/Images/saadcreate_logo.svg",
+    "logoWhite": "/Images/saadcreate_logo.svg"
+  },
+  "hero": {
+    "slides": [
+      {
+        "id": "slide-1",
+        "image": "/carousel-1.jpg",
+        "eyebrow": "Welcome to SaadCreate",
+        "title": "A sanctuary of",
+        "highlight": "timeless luxury",
+        "subtitle": "Discover a stay where elegance meets serenity — every detail, devoted to you."
+      },
+      {
+        "id": "slide-2",
+        "image": "/image.jpg",
+        "eyebrow": "Handcrafted hospitality",
+        "title": "Where every suite",
+        "highlight": "tells a story",
+        "subtitle": "From sunrise on the terrace to candlelit dinners, live your chapter with us."
+      },
+      {
+        "id": "slide-3",
+        "image": "/carousel-2.jpg",
+        "eyebrow": "Beyond a hotel",
+        "title": "Your next escape",
+        "highlight": "awaits you",
+        "subtitle": "Indulge in curated experiences designed around your every desire."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About the House",
+    "title": "A legacy of",
+    "highlight": "refined hospitality",
+    "image": "/about-1.jpg",
+    "imageSecondary": "/about-2.jpg",
+    "paragraphs": [
+      "SaadCreate Hotel is a private retreat where heritage architecture meets modern comfort. Our suites are sculpted for rest, our terraces for reverie.",
+      "Every stay is designed around you — personal concierges, bespoke menus, and a staff trained to anticipate the moments before they become needs.",
+      "Whether arriving for business or a slow escape, you'll find a rhythm here that feels unmistakably yours."
+    ],
+    "stats": [
+      { "label": "Signature Suites", "value": "120" },
+      { "label": "Michelin-Trained Chefs", "value": "18" },
+      { "label": "Years of Hospitality", "value": "25" }
+    ]
+  },
+  "services": {
+    "eyebrow": "Experiences",
+    "title": "Curated for",
+    "highlight": "every desire",
+    "items": [
+      {
+        "id": "svc-1",
+        "icon": "school",
+        "name": "Suites & Residences",
+        "description": "Private sanctuaries with panoramic views, designed by award-winning architects."
+      },
+      {
+        "id": "svc-2",
+        "icon": "utensils",
+        "name": "Fine Dining",
+        "description": "Seasonal tasting menus from Michelin-trained chefs, paired with a curated cellar."
+      },
+      {
+        "id": "svc-3",
+        "icon": "spade",
+        "name": "Spa & Wellness",
+        "description": "Signature rituals rooted in ancient traditions and modern therapeutic science."
+      },
+      {
+        "id": "svc-4",
+        "icon": "bike",
+        "name": "Leisure & Sport",
+        "description": "Infinity pool, clay courts, guided excursions and private beach access."
+      },
+      {
+        "id": "svc-5",
+        "icon": "cake",
+        "name": "Events & Celebrations",
+        "description": "Ballrooms and rooftop terraces staged for weddings, galas and private dinners."
+      },
+      {
+        "id": "svc-6",
+        "icon": "dumbbell",
+        "name": "Fitness & Yoga",
+        "description": "24/7 private gym, sunrise yoga, and personal trainers on request."
+      }
+    ]
+  },
+  "contact": {
+    "address": "Hay Lwahda 1, Laayoune 70000, Morocco",
+    "phone": "+212 607 071 966",
+    "email": "abdellahedaoudi80@gmail.com"
+  },
+  "updatedAt": "2026-05-10T00:00:00.000Z"
+}

@@ -6,6 +6,7 @@ import ABooking from "./ABooking";
 import AContact from "./AContact";
 import AddRoom from "./AddRoom";
 import AUsers from "./AUsers";
+import ASiteContent from "./ASiteContent";
 import { MyContext } from "../../context/Mycontext";
 
 function Admin() {
@@ -36,6 +37,8 @@ function Admin() {
         return <AContact theme={theme} />;
       case "USERS":
         return <AUsers theme={theme} />;
+      case "SITE":
+        return <ASiteContent theme={theme} />;
       case "AddRoom":
         return <AddRoom Admin={Admin} setAdmin={setAdmin} theme={theme} />;
       default:
@@ -47,7 +50,8 @@ function Admin() {
     { id: "ROOMS", label: "Rooms", icon: "🏨" },
     { id: "BOOKING", label: "Bookings", icon: "📅" },
     { id: "CONTACT", label: "Messages", icon: "✉️" },
-    { id: "USERS", label: "Users", icon: "👥" }
+    { id: "USERS", label: "Users", icon: "👥" },
+    { id: "SITE", label: "Site Content", icon: "🖼️" }
   ];
 
   return (
