@@ -1,33 +1,43 @@
-import { Inter, Prompt } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { MyProvider } from './context/Mycontext';
 import { ToastProvider } from './Components/toast';
 
-const inter = Inter({ subsets: ['latin'] });
-const prompt = Prompt({ subsets: ['latin'], weight: '400' });
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-sans',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-display',
+});
 
 export const metadata = {
   metadataBase: new URL('https://edhotel.vercel.app'),
   title: {
-    default: 'SaadCreate Hotel - Premium Hotel Management System',
+    default: 'SaadCreate Hotel — Refined Luxury, Curated Stays',
     template: '%s | SaadCreate Hotel'
   },
-  description: 'SaadCreate Hotel is a cutting-edge hotel management application designed to streamline operations and elevate guest experiences. Manage bookings, streamline guest interactions, and optimize hotel operations with ease.',
+  description:
+    'SaadCreate Hotel is a sanctuary of timeless luxury — handcrafted suites, Michelin-trained cuisine, spa rituals, and curated experiences designed around you.',
   applicationName: 'SaadCreate Hotel',
   authors: [{ name: 'Abdellah Edaoudi', url: 'https://abdellah-edaoudi.vercel.app' }],
   generator: 'Next.js',
   keywords: [
     'SaadCreate Hotel',
+    'Luxury Hotel',
     'Hotel Management System',
-    'PMS',
-    'Hospitality Software',
-    'Online Booking',
-    'Guest Experience',
-    'Hotel Operations',
-    'Property Management'
+    'Suite Booking',
+    'Fine Dining',
+    'Spa & Wellness',
+    'Hospitality',
   ],
   referrer: 'origin-when-cross-origin',
-  creator: 'Abdellah Edaoudi',
+  creator: 'SaadCreate Hotel',
   publisher: 'SaadCreate Hotel Inc.',
   formatDetection: {
     email: false,
@@ -35,28 +45,21 @@ export const metadata = {
     telephone: false,
   },
   icons: {
-    icon: '/Images/saadcreate_logo.png',
-    shortcut: '/Images/saadcreate_logo.png',
-    apple: '/Images/saadcreate_logo.png',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/Images/saadcreate_logo.png',
-    },
+    icon: '/Images/saadcreate_logo.svg',
+    shortcut: '/Images/saadcreate_logo.svg',
+    apple: '/Images/saadcreate_logo.svg',
   },
   manifest: '/manifest.json',
   openGraph: {
-    title: 'SaadCreate Hotel - Premium Hotel Management System',
-    description: 'SaadCreate Hotel provides comprehensive solutions for hotel management, offering tools to enhance efficiency, guest satisfaction, and operational performance.',
+    title: 'SaadCreate Hotel — Refined Luxury, Curated Stays',
+    description:
+      'A sanctuary of timeless luxury, handcrafted hospitality, and curated experiences.',
     url: 'https://edhotel.vercel.app',
     siteName: 'SaadCreate Hotel',
     images: [
       {
-        url: 'https://res.cloudinary.com/dynprvsfg/image/upload/v1717421518/wprm2rcy3qvhn1jvc1wk.png',
-        alt: 'SaadCreate Hotel Dashboard Preview',
-      },
-      {
-        url: 'https://res.cloudinary.com/dynprvsfg/image/upload/v1717421518/wprm2rcy3qvhn1jvc1wk.png',
-        alt: 'SaadCreate Hotel Dashboard Large',
+        url: '/Images/saadcreate_logo.svg',
+        alt: 'SaadCreate Hotel crest',
       },
     ],
     locale: 'en_US',
@@ -64,16 +67,16 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SaadCreate Hotel - Premium Hotel Management System',
-    description: 'SaadCreate Hotel is a cutting-edge hotel management application designed to streamline operations and elevate guest experiences.',
-    site: '@edhotel',
-    creator: '@edaoudi_abdellah',
-    images: ['https://res.cloudinary.com/dynprvsfg/image/upload/v1717421518/wprm2rcy3qvhn1jvc1wk.png'],
+    title: 'SaadCreate Hotel — Refined Luxury, Curated Stays',
+    description: 'A sanctuary of timeless luxury and handcrafted hospitality.',
+    site: '@saadcreatehotel',
+    creator: '@saadcreatehotel',
+    images: ['/Images/saadcreate_logo.svg'],
   },
   robots: {
     index: true,
     follow: true,
-    nocache: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -83,17 +86,20 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  category: 'technology',
+  category: 'hospitality',
+};
+
+export const viewport = {
+  themeColor: '#0B1B2B',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`${inter.variable} ${playfair.variable} scroll-smooth`}>
       <head>
         <link rel="canonical" href="https://edhotel.vercel.app" />
-        <meta name="google-site-verification" content="your-verification-code" />
       </head>
-      <body className={`${prompt.className}`}>
+      <body className="font-sans bg-brand-cream text-brand-navy antialiased">
         <ToastProvider>
           <MyProvider>
             <script
@@ -103,10 +109,10 @@ export default function RootLayout({ children }) {
                   "@context": "https://schema.org",
                   "@type": "Hotel",
                   "name": "SaadCreate Hotel",
-                  "description": "Premium Hotel Management System",
+                  "description": "Refined luxury hotel with signature suites, fine dining and spa.",
                   "url": "https://edhotel.vercel.app",
-                  "logo": "https://edhotel.vercel.app/Images/saadcreate_logo.png",
-                  "image": "https://res.cloudinary.com/dynprvsfg/image/upload/v1717421518/wprm2rcy3qvhn1jvc1wk.png",
+                  "logo": "https://edhotel.vercel.app/Images/saadcreate_logo.svg",
+                  "image": "https://edhotel.vercel.app/Images/saadcreate_logo.svg",
                   "telephone": "+212607071966",
                   "email": "abdellahedaoudi80@gmail.com",
                   "address": {
@@ -117,22 +123,15 @@ export default function RootLayout({ children }) {
                     "postalCode": "70000",
                     "addressCountry": "MA"
                   },
-                  "sameAs": [
-                    "https://www.linkedin.com/in/abdellah-edaoudi-0bbba02a5/",
-                    "https://abdellah-edaoudi.vercel.app",
-                    "https://www.instagram.com/edaoudi_abdellah/",
-                    "https://www.tiktok.com/@edaoudi_abdellah"
-                  ],
                   "priceRange": "$$",
                   "aggregateRating": {
                     "@type": "AggregateRating",
-                    "ratingValue": "4.8",
+                    "ratingValue": "4.9",
                     "reviewCount": "4657"
                   }
                 })
               }}
             />
-
             {children}
           </MyProvider>
         </ToastProvider>

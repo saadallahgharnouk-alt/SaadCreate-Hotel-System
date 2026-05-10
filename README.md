@@ -1,10 +1,29 @@
-# EdHotel - Premium Hotel Management System 🏨
+# SaadCreate Hotel — Refined Luxury, Curated Stays 🕊️
 
-![EdHotel Logo](/public/Images/logo.png)
+![SaadCreate Hotel](/public/Images/saadcreate_logo.svg)
 
 ## 📋 Overview
 
-EdHotel is a cutting-edge hotel management application designed to streamline operations and elevate guest experiences. Built with Next.js and modern web technologies, it provides comprehensive solutions for hotel management.
+SaadCreate Hotel is a luxury hotel management app built with Next.js. It combines a refined public-facing site (hero carousel, about, services, rooms, booking, contact) with an admin panel that lets hotel managers edit everything — rooms, images, and even site-wide content — from one place.
+
+## 🎨 New Visual Identity (v2)
+
+- **Palette** — Deep navy `#0B1B2B`, champagne gold `#C8A35A → #8C6B2E`, ivory `#F6F1E7`
+- **Typography** — *Playfair Display* for editorial headlines + *Inter* for UI
+- **Logo** — Crafted SVG crest with a stylised "S" monogram, crown notch, and gold gradient (scales perfectly at any size)
+- **Design language** — Editorial whitespace, gold gradient accents, gentle parallax on the hero, soft shadows, rounded "card-lux" treatment throughout
+
+## 🛠️ Manager's "Site Content" Page
+
+Located in the admin panel at **Admin → Site Content**, hotel managers can now edit the public site **without touching code**:
+
+- **Brand** — replace the logo (upload image), change brand name + tagline
+- **Hero carousel** — add/remove/reorder slides, change images, eyebrow, title, gold highlight, subtitle
+- **About** — swap primary & secondary images, edit paragraphs and stats (e.g. "25+ Years")
+- **Services** — add/remove/edit each service card (icon + name + description)
+- **Contact** — address, phone, email (appears in footer)
+
+Uploads go to `/public/uploads/` via `POST /api/upload`. Content is persisted to `app/data/site-content.json` via `GET`/`PUT /api/site-content`.
 
 ## ✨ Features
 
@@ -31,13 +50,16 @@ This application includes comprehensive SEO features:
 
 ## 🛠️ Technologies Used
 
-- **Framework**: Next.js 14
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Fonts**: Google Fonts (Inter, Prompt)
-- **Animations**: Animate.css
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS (custom brand palette + Playfair/Inter fonts)
+- **Icons**: Inline SVG (lucide-style)
+- **Fonts**: Google Fonts (Playfair Display + Inter)
 - **HTTP Client**: Axios
-- **Notifications**: React Toastify
+- **Storage**: Local JSON + `/public/uploads/` (dev). Swap in Cloudinary/S3 for production.
+
+## ⚠️ Production note on image uploads
+
+`POST /api/upload` writes to `public/uploads/` on the server filesystem — that works in dev and on any Node host, but **does not persist on Vercel** (read-only FS). For production, replace the body of `app/api/upload/route.js` with a Cloudinary/S3/Supabase Storage upload and return the remote URL. The rest of the app needs no changes.
 
 ## 📦 Installation
 

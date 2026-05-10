@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" width="420" height="120" role="img" aria-label="SaadCreate Hotel wordmark">
+  <defs>
+    <linearGradient id="gold3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E6C88A"/>
+      <stop offset="50%" stop-color="#C8A35A"/>
+      <stop offset="100%" stop-color="#8C6B2E"/>
+    </linearGradient>
+  </defs>
+  <!-- Crest (compact) -->
+  <g transform="translate(0,0) scale(0.9)">
+    <path d="M60 6 L108 20 V58 C108 86 86 108 60 114 C34 108 12 86 12 58 V20 Z"
+          fill="#0B1B2B" stroke="url(#gold3)" stroke-width="2.5"/>
+    <path d="M77 42 C77 34 70 30 60 30 C50 30 43 34 43 42 C43 50 50 52 60 54
+             C70 56 77 58 77 66 C77 74 70 78 60 78 C50 78 43 74 43 66"
+          fill="none" stroke="url(#gold3)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M48 22 L54 18 L60 22 L66 18 L72 22 L72 26 L48 26 Z" fill="url(#gold3)"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="130" y="62" font-family="'Playfair Display', Georgia, serif"
+        font-size="34" font-weight="700" fill="url(#gold3)" letter-spacing="1.5">SAADCREATE</text>
+  <text x="130" y="92" font-family="'Inter', Arial, sans-serif"
+        font-size="14" font-weight="400" fill="#E9E2D2" letter-spacing="6">H O T E L &#8226; L U X U R Y &#8226; S T A Y</text>
+</svg>
